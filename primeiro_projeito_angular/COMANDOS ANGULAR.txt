@@ -1,0 +1,24 @@
+COMANDOS ANGULAR
+
+ng new primeiros-cogios-angular --no-standalone (Criando um projeto)
+
+ ng serve (executar servidor do front-end, do próprio angular
+
+  ➜  Local:   http://localhost:4200/ (Porta padrão do angular)
+
+ng generate <nome-componente> (serve para gerar componente)
+
+
+ ng new primeiro_projeito_angular --no-standalone
+✔ Do you want to create a 'zoneless' application without zone.js (Developer Preview)? Yes
+
+✔ Which stylesheet format would you like to use? CSS             [ https://developer.mozilla.org/docs/Web/CSS
+
+ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? (y/N) - yes!
+
+Depois disso vai baixar as informações necessárias para criar o projeto em angular.
+
+
+
+
+
