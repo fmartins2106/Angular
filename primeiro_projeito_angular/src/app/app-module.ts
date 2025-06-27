@@ -3,10 +3,12 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Aluno } from './componentes/aluno/aluno';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Aluno
   ],
   imports: [
     BrowserModule,
