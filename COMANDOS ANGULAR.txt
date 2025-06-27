@@ -19,6 +19,22 @@ ng generate <nome-componente> (serve para gerar componente)
 Depois disso vai baixar as informações necessárias para criar o projeto em angular.
 
 
+___________________________________________
+comandos no terminal do vc code.
+
+Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.dev/cli/analytics.
+
+   Yes
+
+
+depois criar uma pasta componentes em app
+abrir o terminal pela pasta componente e digitar
+->>>>>> ng generate component aluno
+
+
+
 
 
 
