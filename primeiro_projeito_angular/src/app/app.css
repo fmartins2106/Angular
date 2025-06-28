@@ -1,0 +1,22 @@
+@charset "UTF-8"
+
+
+.header {
+   margin: auto;
+   text-align: center;
+   padding: 20px;
+   background-color: navy;
+   color: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 2px;
+    background-color: navy;
+    color: white;
+    margin:center;
+}
+footer > p > a {
+    color: white;
+    text-decoration: none;
+}

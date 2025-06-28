@@ -1,0 +1,31 @@
+.div {
+    width: 250px;
+    height: 310px;
+/*     border: solid 1px, black;
+ */    margin: 20px;
+    box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.053);
+    border-radius: 5px;
+}
+div > p {
+    text-align:justify;
+    margin: 2px;
+    font-size: 14px;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+
+

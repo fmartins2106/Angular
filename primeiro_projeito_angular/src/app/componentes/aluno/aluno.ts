@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './aluno.css'
 })
 export class Aluno {
-
+  aluno: any = { /* De qualquer tipo */
+    nome: "Fernando Martins",
+    matricula: 11111,
+    email: "fernandom.adm@gmail.com"
+  }
 }
