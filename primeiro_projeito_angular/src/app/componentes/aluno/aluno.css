@@ -12,7 +12,6 @@ div > p {
     font-size: 14px;
 }
 
-
 h2 {
     text-align: center;
     font-size: 18px;
@@ -22,7 +21,6 @@ h2 {
 img {
     width: 200px;
     height: 200px;
-    display: block;
     margin: 0 auto;
     border-radius: 50%;
 }

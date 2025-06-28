@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { AlunoInterface } from '../../interfaces/AlunoInterfaces';
 
 @Component({
   selector: 'app-aluno',
@@ -7,9 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './aluno.css'
 })
 export class Aluno {
-  aluno: any = { /* De qualquer tipo */
-    nome: "Fernando Martins",
-    matricula: 11111,
-    email: "fernandom.adm@gmail.com"
-  }
+  @Input() /* configura a variavel aluno para receber informação de um componente externo. */
+  aluno!: AlunoInterface;
 }
