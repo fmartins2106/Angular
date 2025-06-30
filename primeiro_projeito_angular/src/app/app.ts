@@ -16,14 +16,24 @@ export class App {
       nome: 'Fernando Martins',
       email: 'fernando.adm@gmail.com',
       cadastro: false,
-      cursos: ["SuperDev Java Full stack"]
+      cursos: ["SuperDev Java Full stack"],
+      imagemUrl:'assets/images/usuario.png'
     },
     {
       matricula: 1,
       nome: 'Maria da Silva',
       email: 'maria@gmail.com',
       cadastro: false,
-      cursos: ["AdasDev"]
+      cursos: ["AdasDev"],
+      imagemUrl:'assets/images/usuario3.png'
+    },
+    {
+      matricula: 2,
+      nome: 'Marta Amaral',
+      email: 'marta@gmail.com',
+      cadastro: false,
+      cursos: ["AdasDev"],
+      imagemUrl:'assets/images/usuario4.png'
     }
   ]
 }

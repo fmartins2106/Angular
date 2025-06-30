@@ -4,4 +4,5 @@ export interface AlunoInterface {
     email: string;
     cadastro: boolean;
     cursos: string[];
+    imagemUrl:string; 
 }
