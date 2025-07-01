@@ -10,7 +10,7 @@ import { AlunoInterface } from './interfaces/AlunoInterfaces';
 export class App {
   protected title = 'primeiro_projeito_angular';
 
-  listaALuno: AlunoInterface[] = [
+  listaAluno: AlunoInterface[] = [
     {
       matricula: 0,
       nome: 'Fernando Martins',
@@ -23,7 +23,7 @@ export class App {
       matricula: 1,
       nome: 'Maria da Silva',
       email: 'maria@gmail.com',
-      cadastro: false,
+      cadastro: true,
       cursos: ["AdasDev"],
       imagemUrl:'assets/images/usuario3.png'
     },

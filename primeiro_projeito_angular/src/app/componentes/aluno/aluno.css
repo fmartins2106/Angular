@@ -1,6 +1,6 @@
 .div {
-    width: 250px;
-    height: 310px;
+    width: 220px;
+    height: 340px;
 /*     border: solid 1px, black;
  */    margin: 20px;
     box-shadow: 1px 3px 5px 5px rgba(0, 0, 0, 0.053);
@@ -22,9 +22,23 @@ img {
     width: 200px;
     height: 200px;
     margin: 0 auto;
-    border-radius: 50%;
+    border-radius: 55%;
     display: block;
 }
+.aprovacao > p {
+    margin: 5px 0;
+    padding: 8px;
+    color: white;
+    border-radius: 4px;
+    text-align: center;
+ }
+ .aprovado {
+    background-color: green;
+ }
+ .reprovado {
+    background-color: red;
+ }
+
 
 
 

@@ -19,3 +19,12 @@ footer > p > a {
     color: white;
     text-decoration: none;
 }
+.cards {
+    display: flex;
+    justify-content: center;
+}
+main {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
