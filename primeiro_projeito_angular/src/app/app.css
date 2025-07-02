@@ -19,7 +19,7 @@ footer > p > a {
     color: white;
     text-decoration: none;
 }
-.cards {
+.cards, .lista {
     display: flex;
     justify-content: center;
 }

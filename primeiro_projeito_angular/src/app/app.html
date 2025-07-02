@@ -2,16 +2,20 @@
       <h1>Sistema Alunos Proway</h1>
 </header>
 <main>
-  <section class="cards">
+ <!--  <section class="cards">
     <app-aluno [aluno]="listaAluno[0]"></app-aluno>
     <app-aluno [aluno]="listaAluno[1]"></app-aluno>
     <app-aluno [aluno]="listaAluno[2]"></app-aluno>
+  </section> -->
+<section class="cards">
+    <app-aluno *ngFor="let aluno of listaAluno" [aluno]="aluno"></app-aluno>
   </section>
 
 <section class="lista">
      <app-aluno-lista [alunos]="listaAluno"></app-aluno-lista> 
 </section>
-  <!-- <app-aluno *ngFor="let aluno of listaALuno" [aluno]="aluno"></app-aluno> -->
+
+  
 </main>
 
 <footer class="footer">

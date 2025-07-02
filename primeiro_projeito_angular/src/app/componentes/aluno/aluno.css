@@ -25,18 +25,24 @@ img {
     border-radius: 55%;
     display: block;
 }
-.aprovacao > p {
+.aprovacao {
     margin: 5px 0;
-    padding: 8px;
     color: white;
-    border-radius: 4px;
-    text-align: center;
+
  }
- .aprovado {
+ .aprovado > p {
     background-color: green;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+ 
  }
- .reprovado {
+ .reprovado > p {
     background-color: red;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+ 
  }
 
 
