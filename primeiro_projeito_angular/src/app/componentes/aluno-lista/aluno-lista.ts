@@ -8,6 +8,5 @@ import { AlunoInterface } from '../../interfaces/AlunoInterfaces';
   styleUrl: './aluno-lista.css'
 })
 export class AlunoLista {
-  @Input() alunos: AlunoInterface[] = [];
   @Input() lista: AlunoInterface[] = [];
 }

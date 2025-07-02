@@ -10,6 +10,8 @@ import { AlunoInterface } from './interfaces/AlunoInterfaces';
 export class App {
   protected title = 'primeiro_projeito_angular';
 
+  exibicao: string = 'cards';
+
   listaAluno: AlunoInterface[] = [
     {
       matricula: 0,

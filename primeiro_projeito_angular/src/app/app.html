@@ -7,12 +7,12 @@
     <app-aluno [aluno]="listaAluno[1]"></app-aluno>
     <app-aluno [aluno]="listaAluno[2]"></app-aluno>
   </section> -->
-<section class="cards">
+<section class="cards" *ngIf="exibicao == 'cards'">
     <app-aluno *ngFor="let aluno of listaAluno" [aluno]="aluno"></app-aluno>
   </section>
 
-<section class="lista">
-     <app-aluno-lista [alunos]="listaAluno"></app-aluno-lista> 
+<section class="lista" *ngIf="exibicao  == 'lista'">
+     <app-aluno-lista [lista]="listaAluno"></app-aluno-lista> 
 </section>
 
   

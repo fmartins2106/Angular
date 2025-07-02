@@ -7,60 +7,26 @@
         <th>Curso</th>
     </tr>
     <tr>
-      <td>{{alunos[0].matricula}}</td>
-      <td>{{alunos[0].nome}}</td>
-      <td>{{alunos[0].cursos}}</td>
-      <td>{{alunos[0].email}}</td>
-      <td>{{alunos[0].cadastro}}</td>
+      <td>{{lista[0].matricula}}</td>
+      <td>{{lista[0].nome}}</td>
+      <td>{{lista[0].cursos}}</td>
+      <td>{{lista[0].email}}</td>
+      <td>{{lista[0].cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
     </tr>
     <tr>
-      <td>{{alunos[0].matricula}}</td>
-      <td>{{alunos[0].nome}}</td>
-      <td>{{alunos[0].cursos}}</td>
-      <td>{{alunos[0].email}}</td>
-      <td>{{alunos[0].cadastro}}</td>
+      <td>{{lista[1].matricula}}</td>
+      <td>{{lista[1].nome}}</td>
+      <td>{{lista[1].cursos}}</td>
+      <td>{{lista[1].email}}</td>
+      <td>{{lista[1].cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
     </tr>
     <tr>
-      <td>{{alunos[0].matricula}}</td>
-      <td>{{alunos[0].nome}}</td>
-      <td>{{alunos[0].cursos}}</td>
-      <td>{{alunos[0].email}}</td>
-      <td>{{alunos[0].cadastro}}</td>
+      <td>{{lista[2].matricula}}</td>
+      <td>{{lista[2].nome}}</td>
+      <td>{{lista[2].cursos}}</td>
+      <td>{{lista[2].email}}</td>
+      <td>{{lista[2].cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
     </tr>
-    <tr>
-      <td>{{alunos[0].matricula}}</td>
-      <td>{{alunos[0].nome}}</td>
-      <td>{{alunos[0].cursos}}</td>
-      <td>{{alunos[0].email}}</td>
-      <td>{{alunos[0].cadastro}}</td>
-    </tr>
-    <tr>
-      <td>{{alunos[0].matricula}}</td>
-      <td>{{alunos[0].nome}}</td>
-      <td>{{alunos[0].cursos}}</td>
-      <td>{{alunos[0].email}}</td>
-      <td>{{alunos[0].cadastro}}</td>
-    </tr>
+
 </table>
    
-<!-- </table>
-<table border="1" cellpadding="8" cellspacing="0">
-  <thead>
-    <tr>
-      <th>Matrícula</th>
-      <th>Nome</th>
-      <th>Curso(s)</th>
-      <th>E-mail</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let aluno of alunos">
-      <td>{{ aluno.matricula }}</td>
-      <td>{{ aluno.nome }}</td>
-      <td>{{ aluno.cursos.join(', ') }}</td>
-      <td>{{ aluno.email }}</td>
-      <td>{{ aluno.cadastro ? 'Aprovado' : 'Reprovado' }}</td>
-    </tr>
-  </tbody>
-</table> -->
