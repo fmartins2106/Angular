@@ -1,1 +1,56 @@
-<p>produtos works!</p>
+<header>
+
+</header>
+<main>
+     <form>
+
+    <div>
+      <label for="codigo">Código:</label>
+      <input type="text" name="codigo" id="codigo" [(ngModel)]="pizza.codigo" required />
+    </div>
+
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" id="nome" [(ngModel)]="pizza.nome" required />
+    </div>
+
+    <div>
+      <label>Tamanhos disponíveis para essa pizza:</label>
+      <div *ngFor="let tamanho of tamanhos; let i = index">
+        <input 
+          type="checkbox" 
+          [id]="'tamanho' + i" 
+          name="tamanho" 
+          [value]="tamanho" 
+          (change)="toggleTamanho(tamanho, $event)"
+          [checked]="tamanhoSelecionado.includes(tamanho)"
+        />
+        <label [for]="'tamanho' + i">{{ tamanho }}</label>
+      </div>
+    </div>
+
+    <div>
+      <label for="preco">Preço: R$</label>
+      <input type="number" name="preco" id="preco" [(ngModel)]="pizza.preco" required />
+    </div>
+
+    <div>
+      <label for="descricao">Descrição da pizza:</label>
+      <textarea name="descricao" id="descricao" rows="4" [(ngModel)]="pizza.descricao"></textarea>
+    </div>
+
+    <div>
+      <label for="imagem">Imagem da Pizza:</label>
+      <input type="file" id="imagem" name="imagem" accept="image/*" (change)="onFileSelected($event)" />
+    </div>
+
+    <div *ngIf="imagemPreview">
+      <p><strong>Pré-visualização:</strong></p>
+      <img [src]="imagemPreview" alt="Imagem Selecionada" width="200" />
+    </div>
+
+  </form>
+</main>
+<footer>
+
+</footer>
