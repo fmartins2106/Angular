@@ -9,4 +9,10 @@ import { AlunoInterface } from '../../interfaces/AlunoInterfaces';
 })
 export class AlunoLista {
   @Input() lista: AlunoInterface[] = [];
+
+// O decorator @Input() permite que o componente "AlunoLista" receba dados do componente pai.
+// Neste caso, ele está recebendo uma lista de alunos (`lista`) do tipo AlunoInterface[].
+// Isso permite que o componente exiba ou manipule essa lista vinda de fora.
+// A inicialização com `[]` evita erros caso nenhum valor seja passado pelo componente pai.
+
 }

@@ -6,27 +6,11 @@
         <th>E-mail</th>
         <th>Curso</th>
     </tr>
-    <tr>
+    <tr *ngFor="let aluno of lista">
       <td>{{lista[0].matricula}}</td>
       <td>{{lista[0].nome}}</td>
       <td>{{lista[0].cursos}}</td>
       <td>{{lista[0].email}}</td>
       <td>{{lista[0].cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
     </tr>
-    <tr>
-      <td>{{lista[1].matricula}}</td>
-      <td>{{lista[1].nome}}</td>
-      <td>{{lista[1].cursos}}</td>
-      <td>{{lista[1].email}}</td>
-      <td>{{lista[1].cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
-    </tr>
-    <tr>
-      <td>{{lista[2].matricula}}</td>
-      <td>{{lista[2].nome}}</td>
-      <td>{{lista[2].cursos}}</td>
-      <td>{{lista[2].email}}</td>
-      <td>{{lista[2].cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
-    </tr>
-
 </table>
-   

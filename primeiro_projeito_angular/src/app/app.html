@@ -1,21 +1,27 @@
 <header class="header">
       <h1>Sistema Alunos Proway</h1>
 </header>
+
 <main>
- <!--  <section class="cards">
-    <app-aluno [aluno]="listaAluno[0]"></app-aluno>
-    <app-aluno [aluno]="listaAluno[1]"></app-aluno>
-    <app-aluno [aluno]="listaAluno[2]"></app-aluno>
-  </section> -->
-<section class="cards" *ngIf="exibicao == 'cards'">
-    <app-aluno *ngFor="let aluno of listaAluno" [aluno]="aluno"></app-aluno>
+
+  <div class="button">
+    <button (click)="alterarExibicao()">Mostrar {{exibicao == "cards" ? 'lista' : 'cards'}}</button>
+    <button (click)="mostrarAprovados()">Mostrar alunos aprovados</button>
+  </div>
+
+  <section class="cards" *ngIf="exibicao == 'aprovados'">
+      <app-aluno *ngFor="let aluno of aprovados" [aluno]="aluno"></app-aluno>
   </section>
 
 <section class="lista" *ngIf="exibicao  == 'lista'">
-     <app-aluno-lista [lista]="listaAluno"></app-aluno-lista> 
+     <app-aluno-lista [lista]="listaAluno"></app-aluno-lista>
 </section>
 
-  
+ <section class="cards" *ngIf="exibicao == 'cards'">
+    <app-aluno *ngFor="let aluno of listaAluno" [aluno]="aluno"></app-aluno>
+</section>
+
+
 </main>
 
 <footer class="footer">

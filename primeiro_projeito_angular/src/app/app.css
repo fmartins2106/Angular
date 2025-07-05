@@ -22,9 +22,30 @@ footer > p > a {
 .cards, .lista {
     display: flex;
     justify-content: center;
+
 }
 main {
     display: flex;
     padding: 20px;
     flex-direction: column;
 }
+.button {
+  display: flex;
+  justify-content:flex-end ;
+  margin-bottom: 20px;
+}
+ .button button {
+  padding: 8px 10px;
+  border-radius: 5px;
+  color: #ffff;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: navy;
+ }
+ .button button:hover {
+  background-color: #ef6205;
+ }
+
+
+
