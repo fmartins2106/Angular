@@ -15,7 +15,8 @@
         <strong>E-mail:</strong> {{aluno.email}}
     </p>
     <p>
-        <strong>Média:</strong> Calcular a média
+       <strong>Média:</strong>
+    {{ media !== null ? media.toFixed(1) : 'Notas inválidas ou não lançadas' }}
     </p>
     <div class="aprovacao" [ngClass]="aluno.cadastro == true ? 'aprovado' : 'reprovado'">
         <p >Aluno {{aluno.cadastro == true? 'Aprovado' : 'Reprovado'}}</p>

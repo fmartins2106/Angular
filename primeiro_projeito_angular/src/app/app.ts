@@ -13,9 +13,7 @@ export class App {
 
   exibicao: string = 'cards';
 
-
-
-  aprovados: AlunoInterface[] = [];
+  listaFiltro: AlunoInterface[] = [];
 
   listaAluno: AlunoInterface[] = [
     {
@@ -52,7 +50,7 @@ export class App {
       cadastro: true,
       cursos: ["C#, SQLServer"],
       imagemUrl:'assets/images/usuario2.png',
-      notas: [10,5,10,6]
+      notas: [10,5,10,6],
     }
   ];
 
@@ -61,15 +59,23 @@ export class App {
       this.exibicao = 'lista';
     } else if (this.exibicao == 'lista'){
       this.exibicao = 'cards';
-    } else if(this.exibicao = 'aprovados'){
+    } else if(this.exibicao === 'aprovados'){
       this.exibicao = 'aprovados';
     }
   }
+  
 
- mostrarAprovados(): void {
-  this.aprovados = this.listaAluno.filter(aluno => aluno.cadastro === true);
+filtrarAluno(tipo: string): void {
+  if (tipo === 'aprovados') {
+    this.listaFiltro = this.listaAluno.filter(a => a.cadastro === true);
+  } else if (tipo === 'reprovados') {
+    this.listaFiltro = this.listaAluno.filter(a => a.cadastro === false);
+  } else if (tipo === 'todos') {
+    this.listaFiltro = this.listaAluno;
+  }
+
   this.exibicao = 'aprovados';
 }
 
-}
 
+}
