@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './meu-primeiro-componente.css'
 })
 export class MeuPrimeiroComponente {
-
+  nome: string = 'Fernando';
+  idade: number = 34;
 }
