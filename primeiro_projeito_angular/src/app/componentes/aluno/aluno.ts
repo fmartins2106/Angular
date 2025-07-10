@@ -31,6 +31,6 @@ export class Aluno {
     const soma = notasValidas.reduce((total, nota) => total + nota, 0);
     return soma / notasValidas.length;
   }
-  
+
 
 }

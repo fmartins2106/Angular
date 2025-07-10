@@ -5,8 +5,7 @@
 <main>
 
   <div class="button">
-    <button (click)="alterarExibicao()">Mostrar {{exibicao == "cards" ? 'lista' : 'cards'}}
-    </button>
+    <button (click)="alterarExibicao()">Mostrar {{exibicao == "cards" ? 'lista' : 'cards'}}</button>
     <button (click)="filtrarAluno('aprovados')">Mostrar alunos aprovados</button>
     <button (click)="filtrarAluno('reprovados')">Mostrar alunos reprovados</button>
     <button (click)="filtrarAluno('todos')">Mostrar alunos todos</button>
@@ -16,13 +15,20 @@
       <app-aluno *ngFor="let aluno of listaFiltro" [aluno]="aluno"></app-aluno>
   </section>
 
-<section class="lista" *ngIf="exibicao  == 'lista'">
-     <app-aluno-lista [lista]="listaAluno"></app-aluno-lista>
+<!-- LISTA -->
+<section class="lista" *ngIf="exibicao == 'lista'">
+  <app-aluno-lista
+    [lista]="tipoFiltro === 'todos' ? listaAluno : listaFiltro"
+    (excluir)="onExcluir($event)">
+  </app-aluno-lista>
 </section>
 
- <section class="cards" *ngIf="exibicao == 'cards'">
-    <app-aluno *ngFor="let aluno of listaAluno" [aluno]="aluno"></app-aluno>
+
+<!-- CARDS -->
+<section class="cards" *ngIf="exibicao == 'cards'">
+  <app-aluno *ngFor="let aluno of (tipoFiltro === 'todos' ? listaAluno : listaFiltro)" [aluno]="aluno"></app-aluno>
 </section>
+
 
 
 </main>

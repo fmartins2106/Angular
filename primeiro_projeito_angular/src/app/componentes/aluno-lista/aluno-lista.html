@@ -5,13 +5,17 @@
         <th>Cadastro</th>
         <th>E-mail</th>
         <th>Curso</th>
+        <th>Ações</th>
     </tr>
     <tr *ngFor="let aluno of lista">
-      <td>{{lista[0].matricula}}</td>
-      <td>{{lista[0].nome}}</td>
-      <td>{{lista[0].cursos}}</td>
-      <td>{{lista[0].email}}</td>
-      
-      <td>{{lista[0].cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
+      <td>{{aluno.matricula}}</td>
+      <td>{{aluno.nome}}</td>
+      <td>{{aluno.cursos}}</td>
+      <td>{{aluno.email}}</td>
+      <td>{{aluno.cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
+      <td>
+          <button class="btn btn-green ">Editar</button>
+          <button class="btn btn-red " (click)="excluirAluno(aluno.matricula)">Excluir</button>
+      </td>
     </tr>
 </table>

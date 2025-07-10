@@ -26,6 +26,30 @@ table tr:hover {
 
 }
 .lista {
-    width: 800px;
+    width: 900px;
 
+}
+.excluir {
+  color: white;
+  background-color: red;
+}
+
+.editar {
+  color: white;
+  background-color: green;
+}
+.btn {
+  padding:3px;
+  border:none;
+  border-radius: 5px;
+  margin-left: 7px;
+  cursor: pointer;
+}
+.btn-green {
+  background-color: green;
+  color: white;
+}
+.btn-red {
+  background-color: red;
+  color: white;
 }

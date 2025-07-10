@@ -14,10 +14,11 @@
     <p>
         <strong>E-mail:</strong> {{aluno.email}}
     </p>
-    <p>
-       <strong>Média:</strong>
-    {{ media !== null ? media.toFixed(1) : 'Notas inválidas ou não lançadas' }}
-    </p>
+      <p>
+         <strong>Média:</strong>
+        Média: {{ media !== null ? media.toFixed(2) : 'Não disponível' }}
+      </p>
+
     <div class="aprovacao" [ngClass]="aluno.cadastro == true ? 'aprovado' : 'reprovado'">
         <p >Aluno {{aluno.cadastro == true? 'Aprovado' : 'Reprovado'}}</p>
     </div>

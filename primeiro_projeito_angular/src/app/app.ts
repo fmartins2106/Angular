@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AlunoInterface } from './interfaces/AlunoInterfaces';
 import { AlunoLista } from './componentes/aluno-lista/aluno-lista';
+import { notStrictEqual } from 'node:assert';
+import { Aluno } from './componentes/aluno/aluno';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +16,7 @@ export class App {
   exibicao: string = 'cards';
 
   listaFiltro: AlunoInterface[] = [];
+  tipoFiltro: 'todos' | 'aprovados' | 'reprovados' = 'todos';
 
   listaAluno: AlunoInterface[] = [
     {
@@ -23,7 +26,7 @@ export class App {
       cadastro: false,
       cursos: ["SuperDev Java Full stack"],
       imagemUrl:'assets/images/usuario.png',
-      notas: [10,5,10,6]
+      notas: [3,5,2,6]
     },
     {
       matricula: 1,
@@ -32,7 +35,7 @@ export class App {
       cadastro: true,
       cursos: ["AdasDev"],
       imagemUrl:'assets/images/usuario3.png',
-      notas: [10,5,10,6]
+      notas: [5,10,10]
     },
     {
       matricula: 2,
@@ -41,7 +44,7 @@ export class App {
       cadastro: false,
       cursos: ["AdasDev"],
       imagemUrl:'assets/images/usuario4.png',
-      notas: [10,5,10,6]
+      notas: [2,5,5,2]
     },
     {
       matricula: 3,
@@ -63,19 +66,42 @@ export class App {
       this.exibicao = 'aprovados';
     }
   }
-  
 
-filtrarAluno(tipo: string): void {
+
+filtrarAluno(tipo: 'aprovados' | 'reprovados' | 'todos'): void {
+  this.tipoFiltro = tipo;
+
   if (tipo === 'aprovados') {
     this.listaFiltro = this.listaAluno.filter(a => a.cadastro === true);
   } else if (tipo === 'reprovados') {
     this.listaFiltro = this.listaAluno.filter(a => a.cadastro === false);
-  } else if (tipo === 'todos') {
+  } else {
     this.listaFiltro = this.listaAluno;
   }
-
-  this.exibicao = 'aprovados';
 }
+
+onExcluir(matricula: number): void {
+  this.listaAluno.forEach((aluno,index) =>{
+    if (aluno.matricula === matricula){
+        this.listaAluno.splice(index,1);
+    }else {
+        console.log(`Matrícula ${matricula} não encontrado.`);
+    }
+  });
+
+  
+
+}
+
+/*
+Percorrer a lista de alunos
+encontrar o aluno com a matricula igual a do parametro recebido
+remover o aluno da lista.--- lista.splice(index,quantidadeRemovida)
+ */
+
+
+
+
 
 
 }
