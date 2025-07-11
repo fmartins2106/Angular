@@ -3,19 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projeto_curso_angular": {
+    "Projeto_Curso_Angular": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -32,6 +22,7 @@
               }
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ]
           },
@@ -63,10 +54,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "projeto_curso_angular:build:production"
+              "buildTarget": "Projeto_Curso_Angular:build:production"
             },
             "development": {
-              "buildTarget": "projeto_curso_angular:build:development"
+              "buildTarget": "Projeto_Curso_Angular:build:development"
             }
           },
           "defaultConfiguration": "development"
