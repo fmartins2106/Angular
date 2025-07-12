@@ -3,6 +3,7 @@ import { AlunoInterface } from './interfaces/AlunoInterfaces';
 import { AlunoLista } from './componentes/aluno-lista/aluno-lista';
 import { notStrictEqual } from 'node:assert';
 import { Aluno } from './componentes/aluno/aluno';
+import { AlunoServico } from './servicos/aluno-servico';
 
 @Component({
   selector: 'app-root',
@@ -10,52 +11,37 @@ import { Aluno } from './componentes/aluno/aluno';
   standalone: false,
   styleUrl: './app.css'
 })
+
+
 export class App {
   protected title = 'primeiro_projeito_angular';
 
-  exibicao: string = 'cards';
+  exibicao: string = 'lista';
 
-  listaFiltro: AlunoInterface[] = [];
   tipoFiltro: 'todos' | 'aprovados' | 'reprovados' = 'todos';
 
-  listaAluno: AlunoInterface[] = [
-    {
-      matricula: 0,
-      nome: 'Fernando Martins',
-      email: 'fernando.adm@gmail.com',
-      cadastro: false,
-      cursos: ["SuperDev Java Full stack"],
-      imagemUrl:'assets/images/usuario.png',
-      notas: [3,5,2,6]
-    },
-    {
-      matricula: 1,
-      nome: 'Maria da Silva',
-      email: 'maria@gmail.com',
-      cadastro: true,
-      cursos: ["AdasDev"],
-      imagemUrl:'assets/images/usuario3.png',
-      notas: [5,10,10]
-    },
-    {
-      matricula: 2,
-      nome: 'Marta Amaral',
-      email: 'marta@gmail.com',
-      cadastro: false,
-      cursos: ["AdasDev"],
-      imagemUrl:'assets/images/usuario4.png',
-      notas: [2,5,5,2]
-    },
-    {
-      matricula: 3,
-      nome: 'João da Silva',
-      email: 'joao@gmail.com',
-      cadastro: true,
-      cursos: ["C#, SQLServer"],
-      imagemUrl:'assets/images/usuario2.png',
-      notas: [10,5,10,6],
-    }
-  ];
+    // ✅ Constructor está no lugar certo agora
+  constructor(private servico: AlunoServico) {
+
+  }
+
+  listaAluno!:AlunoInterface[];
+  listaFiltro!: AlunoInterface[];
+
+  ngOnInit(): void {
+
+  /*   this.listaAluno.forEach(aluno => {
+      const soma = aluno.notas.reduce((total, nota) => total + nota, 0);
+      const media = soma / aluno.notas.length;
+      aluno.media = Number(media.toFixed(2));
+      this.listaAluno = this.servico.getListaAlunos();
+    }); */
+   /*  this.listaFiltro = [...this.listaAluno]; // carregar todos inicialmente */
+    this.listaFiltro = this.servico.getListaAlunos();
+  }
+
+
+
 
   alterarExibicao() : void {
     if(this.exibicao == 'cards'){
@@ -88,8 +74,6 @@ onExcluir(matricula: number): void {
         console.log(`Matrícula ${matricula} não encontrado.`);
     }
   });
-
-  
 
 }
 

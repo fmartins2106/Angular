@@ -18,7 +18,7 @@
 <!-- LISTA -->
 <section class="lista" *ngIf="exibicao == 'lista'">
   <app-aluno-lista
-    [lista]="tipoFiltro === 'todos' ? listaAluno : listaFiltro"
+    [lista]="listaFiltro"
     (excluir)="onExcluir($event)">
   </app-aluno-lista>
 </section>
@@ -26,13 +26,15 @@
 
 <!-- CARDS -->
 <section class="cards" *ngIf="exibicao == 'cards'">
-  <app-aluno *ngFor="let aluno of (tipoFiltro === 'todos' ? listaAluno : listaFiltro)" [aluno]="aluno"></app-aluno>
+    <app-aluno *ngFor="let aluno of listaFiltro" [aluno]="aluno"></app-aluno>
+</section>
+
+<section>
+    <app-aluno-form></app-aluno-form>
 </section>
 
 
-
 </main>
-
 <footer class="footer">
     <p>Desenvolvido por <a href="https://github.com/fmartins2106">Fernando Martins</a></p>
 </footer>

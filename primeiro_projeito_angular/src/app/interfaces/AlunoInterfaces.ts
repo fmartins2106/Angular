@@ -7,4 +7,5 @@ export interface AlunoInterface {
     imagemUrl:string;
     notas: number[];
     status: boolean;
+    media?:number;
 }

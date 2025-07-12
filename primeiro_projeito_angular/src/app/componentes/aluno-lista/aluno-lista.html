@@ -1,21 +1,62 @@
-<table class="lista">
+<div>
+  <table class="lista">
     <tr>
         <th>Mátricula</th>
         <th>Nome</th>
         <th>Cadastro</th>
         <th>E-mail</th>
+        <th>Média</th>
         <th>Curso</th>
+        <th>Status</th>
         <th>Ações</th>
     </tr>
     <tr *ngFor="let aluno of lista">
       <td>{{aluno.matricula}}</td>
       <td>{{aluno.nome}}</td>
-      <td>{{aluno.cursos}}</td>
-      <td>{{aluno.email}}</td>
       <td>{{aluno.cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
+      <td>{{aluno.email}}</td>
+      <td>{{aluno.media}}</td>
+      <td>{{aluno.cursos}}</td>
+      <td>{{aluno.status == true ? 'Ativo' : 'Inativo'}}</td>
       <td>
           <button class="btn btn-green ">Editar</button>
           <button class="btn btn-red " (click)="excluirAluno(aluno.matricula)">Excluir</button>
+          <button (click)="alterarStatus()">{{exibicao == "Ativo" ? 'Inativo' : 'cards'}}</button>
       </td>
     </tr>
+  </table>
+
+</div>
+<!-- <table class="lista">
+  <thead>
+    <tr>
+        <th>Mátricula</th>
+        <th>Nome</th>
+        <th>Cadastro</th>
+        <th>E-mail</th>
+        <th>Média</th>
+        <th>Curso</th>
+        <th>Status</th>
+        <th>Ações</th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr *ngFor="let aluno of lista">
+      <td>{{aluno.matricula}}</td>
+      <td>{{aluno.nome}}</td>
+      <td>{{aluno.cadastro == true ? 'Aprovado' : 'Reprovado'}}</td>
+      <td>{{aluno.email}}</td>
+      <td>{{aluno.media}}</td>
+      <td>{{aluno.cursos}}</td>
+      <td>{{aluno.status == true ? 'Ativo' : 'Inativo'}}</td>
+      <td>
+          <button class="btn btn-green ">Editar</button>
+          <button class="btn btn-red " (click)="excluirAluno(aluno.matricula)">Excluir</button>
+          <button (click)="alterarStatus()">{{exibicao == "Ativo" ? 'Inativo' : 'cards'}}</button>
+      </td>
+    </tr>
+
+  </tbody>
 </table>
+ -->
