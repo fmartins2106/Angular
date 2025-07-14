@@ -11,10 +11,12 @@ import { Componente08 } from "./componente08/componente08";
 import { Componente09 } from "./componente09/componente09";
 import { Componente10 } from "./componente10/componente10";
 import { Componente11 } from "./componente11/componente11";
+import { Componente12 } from "./componente12/componente12";
+import { Componente13 } from "./componente13/componente13";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Componente01, Componente02, Componente03, Componente04, Componente05, Componente06, Componente07, Componente08, Componente09, Componente10, Componente11],
+  imports: [RouterOutlet, Componente01, Componente02, Componente03, Componente04, Componente05, Componente06, Componente07, Componente08, Componente09, Componente10, Componente11, Componente12, Componente13],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

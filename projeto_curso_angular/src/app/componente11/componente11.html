@@ -30,12 +30,12 @@
   }
   <input type="text" formControlName="cidade" placeholder="Cidade" class="form-control">
 
-  @if (btnCadsatrar) {
+  @if (btnCadastrar) {
     <input type="button" value="Cadastrar" (click)="cadastrar()" class="btn btn-primary" [disabled]="formulario.invalid">
   }@else{
-    <input type="button" value="Alterar"   class="btn btn-primary">
-    <input type="button" value="Remover"   class="btn btn-primary">
-    <input type="button" value="Cancelar"  class="btn btn-primary">
+    <input type="button" value="Alterar" (click)="alterar()"   class="btn btn-primary">
+    <input type="button" value="Remover" (click)="remover()"   class="btn btn-primary">
+    <input type="button" value="Cancelar" (click)="cancelamento()"  class="btn btn-primary">
   }
 </form>
 
@@ -53,7 +53,7 @@
               <td>{{pessoa.nome}}</td>
               <td>{{pessoa.idade}}</td>
               <td>{{pessoa.cidade}}</td>
-              <td><button class="btn btn-primary">Selecionar</button></td>
+              <td><button class="btn btn-primary" (click)="selecionar(indice)" >Selecionar</button></td>
             </tr>
       </tbody>
 </table>
