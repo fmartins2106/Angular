@@ -12,7 +12,7 @@ ng generate <nome-componente> (serve para gerar componente)
  ng new primeiro_projeito_angular --no-standalone
 ✔ Do you want to create a 'zoneless' application without zone.js (Developer Preview)? Yes
 
-✔ Which stylesheet format would you like to use? CSS             [ https://developer.mozilla.org/docs/Web/CSS
+✔ Which stylesheet format would you like to use? CSS   [ https://developer.mozilla.org/docs/Web/CSS
 
  Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? (y/N) - yes!
 
@@ -33,6 +33,158 @@ depois criar uma pasta componentes em app
 abrir o terminal pela pasta componente e digitar
 ->>>>>> ng generate component aluno
 
+
+_____________________________________________
+Adicionando o Bootstrap no angular.
+terminal -> npm i bootstrap@5.3.7 (pegar o link no site do bootstrap)
+
+ir no arquivo angular.Json e adicionar em styles o caminho abaixo, de onde esta a pasta css do bootstrap.
+
+"styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ]
+
+após, ir no main.ts e adicionar na primeira linha o caminho abaixo.
+
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ✅ Ativa o JS do Bootstrap
+
+______________________________________________________
+
+criar variáveis e não especificar o valor ou deixar nulas.
+
+-> ir no arquivo tsconfig.json -> abaixo do "compilerOptions": {
+adicionar ->  "strictNullChecks": false,
+
+
+__________________________________________________________________________
+Pipes
+[PIPES NATIVOS DO ANGULAR NA VERSÃO 17]
+
+Os Pipes disponíveis no Angular 17 são:
+- Currency Pipe;
+- Date Pipe;
+- Json Pipe;
+- LowerCase Pipe;
+- UpperCase Pipe ;
+- PercentPipe;
+- SlicePipe;
+- TitleCasePipe;
+- AsyncPipe.
+
+Abaixo deixarei uma breve descrição e um exemplo de cada um:
+
+*** Currency: Para trabalhar com valores monetários, exemplo: *** 
+
+// Variável do arquivo TS
+valor: number = 12345.6789;
+
+// Estrutura do arquivo HTML
+<p>{{ valor | currency }}</p> (Retorna $12,345.68)
+<p>{{ valor | currency:'EUR':'symbol-narrow':'4.2-2' }}</p> (Retorna €12,345.68)
+
+*** Date: Para trabalhar com datas e horas, exemplo: *** 
+
+// Variável do arquivo TS
+dataAtual: Date = new Date(); // Supondo que a data é: 03/03/2024
+
+// Estrutura do arquivo HTML:
+<p>{{ dataAtual | date }}</p> (Retorna Mar 3, 2024)
+<p>{{ dataAtual | date:'fullDate' }}</p> (Retorna Friday, March 3, 2024)
+<p>{{ dataAtual | date:'short' }}</p> (Retorna 3/3/24, 12:17 AM)
+
+*** JSON: Para exibir estrutura de objetos no formato JSON, exemplo: *** 
+
+// Variável do arquivo TS
+pessoa:any = {'nome':'Ralf', 'idade':34};
+
+// Estrutura do arquivo HTML:
+<p>{{ pessoa | json }}</p> (Retorna {'nome':'Ralf', 'idade':34})
+
+*** LOWERCASE: Retorna todas as letras em minúsculas *** 
+
+// Variável do arquivo TS
+nome:string = 'Ralf';
+
+// Estrutura do arquivo HTML:
+<p>{{ nome | lowercase }}</p> (Retorna ralf)
+
+*** UPPERCASE: Retorna todas as letras em maiúsculas *** 
+
+// Variável do arquivo TS
+nome:string = 'Ralf';
+
+// Estrutura do arquivo HTML:
+<p>{{ nome | uppercase }}</p> (Retorna RALF)
+
+*** PERCENT: Transforma um número em percentual *** 
+
+// Variável do arquivo TS
+numero:number = 0.23;
+
+// Estrutura do arquivo HTML:
+<p>{{ numero | percent }}</p> (Retorna 23%)
+
+*** SLICE: Extrai caracteres de uma palavra ou frase. Também é possível trabalhar com vetores (arrays), exemplo: *** 
+
+// Variáveis do arquivo TS
+ vetor: any[] = ['azul', 'verde', 'vermelho', 'amarelo', 'rosa'];
+ texto: string = 'Hello World!';
+
+// Estrutura do arquivo HTML:
+<p>{{ vetor | slice:1:3 }}</p> (Retorna verde e vermelho)
+<p>{{ texto | slice:0:5 }}</p> (Retorna Hello)
+
+*** TITLECASE: A letra inicial de cada palavra ficará em maiúscula, as demais ficarão em minúsculas, exemplo: *** 
+
+// Variável do arquivo TS
+texto:string = 'aprendendo angular 17 no canal Ralf Lima';
+
+// Estrutura do arquivo HTML:
+<p>{{ texto | titlecase }}</p> (Retorna Aprendendo Angular 17 No Canal Ralf Lima)
+
+*** ASYNC: Pipe para trabalhar com estruturas assíncronas, exemplo: *** 
+
+// Variáveis do arquivo TS
+meuObservable: Observable<number> = of(42);
+minhaPromessa: Promise<string> = Promise.resolve('Hello World!');
+
+// Estrutura do arquivo HTML:
+<p>{{ meuObservable | async }}</p> (Retorna 42)
+<p>{{ minhaPromessa | async }}</p> (Retorna Hello World!)
+
+_______________________________________________________________________
+
+criando Pipe personalizado.
+
+ng g p pipe/media 
+
+_____________________________________________________________________
+
+criando uma API falsa
+
+criar uma pasta api e abrir com vs code
+entrar no site abaixo.
+https://www.npmjs.com/package/json-server/v/0.17.4
+
+npm i json-server@0.17.4 colar esse link no terminal.
+*****************************
+comando para executar
+npx json-server produtos.json
+
+_)______________________________________________
+no arquivo APP.CONFIG.TS
+ provideHttpClient(withFetch()) - > serve para implementar requisições, post, get, delete, put
+
+__________________________________________________________
+RxRJ - > Bliblioteca para trabalhar com programação reativa. (no angular já vem nativo)
+
+__________________________________________________________
+Trabalhando com angular material
+https://material.angular.dev/
+clique em get start
+pegue o link ng add @angular/material
+adicione o terminal e rode.
 
 
 
