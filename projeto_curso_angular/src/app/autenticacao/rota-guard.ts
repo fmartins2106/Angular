@@ -14,5 +14,4 @@ export const rotaGuard: CanActivateFn = (route, state) => {
     return false;
   }
 
-
 };
